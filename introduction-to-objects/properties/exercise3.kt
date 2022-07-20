@@ -16,25 +16,25 @@ class Robot {
 
   fun right(steps: Int) {
     x += steps
-    x = crossBoundary(x)
+    x = crossBoundary(x) // answer goes through the crossBoundary function
   }
 
   fun left(steps: Int) {
     x -= steps
-    x = crossBoundary(x)
+    x = crossBoundary(x) // answer goes through the crossBoundary function
   }
 
   fun down(steps: Int) {
     y += steps
-    y = crossBoundary(y)
+    y = crossBoundary(y) // answer goes through the crossBoundary function
   }
 
   fun up(steps: Int) {
     y -= steps
-    y = crossBoundary(y)
+    y = crossBoundary(y) // answer goes through the crossBoundary function
   }
 
-  fun getLocation(): String = "($x, $y)"
+  fun getLocation(): String = "($x, $y)" // display the location of the robot
 }
 
 fun main() {
