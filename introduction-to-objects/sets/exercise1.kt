@@ -6,6 +6,6 @@ fun hasUniqueCharacters(s: String): Boolean {
 }
 
 fun main() {
-  hasUniqueCharacters("abcd") eq true
-  hasUniqueCharacters("abcb") eq false
+  hasUniqueCharacters("abcd") eq true // all the chars in s are unique
+  hasUniqueCharacters("abcb") eq false // some of the chars in s are recurring
 }
