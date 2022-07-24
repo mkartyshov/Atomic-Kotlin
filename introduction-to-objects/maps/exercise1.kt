@@ -7,12 +7,12 @@ class Contact(val name: String, val number: String) {
   }
 }
 
-fun buildNumberToContactMap(contactList: List<Contact>): Map<String, Contact> {
-  val contacts = mutableMapOf<String, Contact>()
-  for (contact in contactList) {
-    contacts[contact.number] = contact
-  }
-  return contacts
+fun buildNumberToContactMap(contactList: List<Contact>): Map<String, Contact> { // the function is taking a phone number and link it to name and number
+  val contacts = mutableMapOf<String, Contact>() // creating a map with contacts
+  for (contact in contactList) { // for each contact in contactList
+    contacts[contact.number] = contact // [contact.number] here is looking up for a value
+  } // so we're looking for a number of each contact
+  return contacts // return the result
 }
 
 fun main() {
