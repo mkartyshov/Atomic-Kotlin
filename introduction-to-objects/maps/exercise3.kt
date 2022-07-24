@@ -10,18 +10,18 @@ class Hamster(val name: String) {
 
 class Cage(private val maxCapacity: Int) {
   private val hamsters: MutableMap<String, Hamster> =
-    mutableMapOf()
+    mutableMapOf() // now we change list to map
 
   fun put(hamster: Hamster): Boolean =
-    if (hamsters.size == maxCapacity)
+    if (hamsters.size == maxCapacity) // if Cage is full then false, we can't add hamster
       false
     else {
-      hamsters[hamster.name] = hamster
+      hamsters[hamster.name] = hamster // if there's place in cage, then add hamster there
       true
     }
 
   fun get(name: String): Hamster =
-    hamsters.getValue(name)
+    hamsters.getValue(name) // using getValue to get hamster's name
 }
 
 fun main() {
