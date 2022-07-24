@@ -22,12 +22,12 @@ class Cage(private val maxCapacity: Int) {
         }
 
     fun get(name: String): Hamster {
-        for (hamster in hamsters) {
-            if (hamster.name == name) {
-                return hamster
+        for (hamster in hamsters) { // for every hamster (class) in a hamsters list (cage class)
+            if (hamster.name == name) { // if hamster.name is listed in hamsters list
+                return hamster // then we return the hamster from the list as in class Hamster (ln.9)
             }
         }
-      throw NoSuchElementException("No hamster called $name")
+      throw NoSuchElementException("No hamster called $name") // if there's no hamster with that name, then exception
     }
 }
 
