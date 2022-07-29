@@ -10,8 +10,11 @@ class Robot {
   var y = 0
 
   fun go(direction: Direction, steps: Int) {
-    when (direction) {
-      /* TODO */
+    when (direction) { // when we go to any direction, we add or subtract steps int
+      UP -> y -= steps
+      DOWN -> y += steps
+      LEFT -> x -= steps
+      RIGHT -> x += steps
     }
   }
 
