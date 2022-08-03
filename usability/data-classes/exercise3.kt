@@ -6,13 +6,13 @@ data class Book(val title: String, val authors: List<Author>)
 data class Author(val name: String)
 
 fun createAuthorToBooksMap(books: List<Book>): Map<Author, List<Book>> {
-  val finalMap = mutableMapOf<Author, MutableList<Book>>()
-  for (book in books) {
-    for (author in book.authors) {
-      if (!finalMap.containsKey(author)) {
-        finalMap[author] = mutableListOf()
+  val finalMap = mutableMapOf<Author, MutableList<Book>>() // declare val that is mutable map of authors and their books
+  for (book in books) { // for book in list of books
+    for (author in book.authors) { // for every author in books.author
+      if (!finalMap.containsKey(author)) { // if finalMap has this author
+        finalMap[author] = mutableListOf() // we add to this author list of books
       }
-      finalMap.getValue(author) += book
+      finalMap.getValue(author) += book // add book to the list
     }
   }
   return finalMap
