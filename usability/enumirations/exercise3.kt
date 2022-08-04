@@ -17,8 +17,8 @@ fun winner(first: Rochambeau, second: Rochambeau): Result {
     ROCK to SCISSORS,
     PAPER to ROCK,
     SCISSORS to PAPER)
-  return if (winning[first] == second) { // how does it work?
-    FIRST_WINS // if the first guy has winning combination => display it
+  return if (winning[first] == second) { // look up for a value in map
+    FIRST_WINS // if the combination is part of the map => first win
   } else {
     SECOND_WINS // in other case => second wins
   }
