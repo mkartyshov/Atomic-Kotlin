@@ -1,7 +1,7 @@
 package extensionPropertiesExercise3
 import atomictest.eq
 
-class Rectangle (val width: Int, val height: Int) // class Rectangle
+class Rectangle (val width: Int, val height: Int) // define a class rectangle
 
 val Rectangle.isSquare: Boolean
     get() = width == height // check if width and height of rectangle are equal
