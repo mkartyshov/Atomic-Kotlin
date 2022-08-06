@@ -2,10 +2,10 @@ package extensionPropertiesExercise1
 import atomictest.eq
 
 val <T> List<T>.secondOrNull: T?
-  get() = TODO()
+  get() = getOrNull(1) // extension property returns the second element from List
 
 val <T> List<T>.penultimateOrNull: T?
-  get() = TODO()
+  get() = getOrNull(size - 2) // extension property returns the penultimate element from List
 
 fun main() {
   val ints = listOf(1, 2, 3)
