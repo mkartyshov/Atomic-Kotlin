@@ -3,7 +3,7 @@ package breakAndContinueExercise2
 fun analyzeStrings1(strings: List<List<String>>) {
   outer@ for (list in strings) {
     inner@ for (string in list) {
-      if (string == "stop") break// add label
+      if (string == "stop") break@inner // we break the loop and go to the label @inner
       println(string)
     }
   }
@@ -12,7 +12,7 @@ fun analyzeStrings1(strings: List<List<String>>) {
 fun analyzeStrings2(strings: List<List<String>>) {
   outer@ for (list in strings) {
     inner@ for (string in list) {
-      if (string == "stop") continue// add label
+      if (string == "stop") continue@outer // we continue the loop from the label @outer
       println(string)
     }
   }
