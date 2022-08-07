@@ -1,29 +1,48 @@
 package breakAndContinueExercise3
 
-fun usingBreak(list: List<Int>) {
+// So the task is to change function and replace break and continue with simple return:
+
+/* fun usingBreak(list: List<Int>) {
   println("before")
   for (i in list) {
     if (i == 0) break
     println("analyzing $i")
   }
   println("after")
+} */
+fun usingBreak(list: List<Int>) {
+  println("before")
+  analyzeList(list)
+  println("after")
 }
 
 fun analyzeList(list: List<Int>) {
-  // TODO
-}
+  for (i in list) {
+    if (i == 0) return
+    println("analyzing $i")
+  }
+}  
 
-fun usingContinue(list: List<Int>) {
+/*fun usingContinue(list: List<Int>) {
   println("before")
   for (i in list) {
     if (i == 0) continue
     println("analyzing $i")
   }
   println("after")
+} */
+
+fun usingContinue(list: List<Int>) {
+  println("before")
+  for (i in list) {
+    analyzeElement(i)
+  }
+  println("after")
 }
 
 fun analyzeElement(i: Int) {
-  // TODO
+  if (i == 0) return
+  println("analyzing $i")
 }
 
 fun main() {
