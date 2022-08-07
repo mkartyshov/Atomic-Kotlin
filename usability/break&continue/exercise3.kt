@@ -31,7 +31,6 @@ fun analyzeList(list: List<Int>) {
   }
   println("after")
 } */
-
 fun usingContinue(list: List<Int>) {
   println("before")
   for (i in list) {
