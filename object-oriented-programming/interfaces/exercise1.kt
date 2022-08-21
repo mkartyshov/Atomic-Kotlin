@@ -7,7 +7,7 @@ interface Computer {
 
 class Cloud(n: Int) : Computer { // n indicating the number of Nodes in class
   val list: List<Node> = List(n) { Node(it) } // create a Node list
-  override fun calculateAnswer(): Int { // count up to n and place each count as the result value of the Node you are currently creating
+  override fun calculateAnswer(): Int { 
     return list.sumOf { it.calculateAnswer() }  // return sum of ints in list
   }
 }
