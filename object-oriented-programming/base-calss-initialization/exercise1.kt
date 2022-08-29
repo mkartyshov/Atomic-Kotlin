@@ -1,3 +1,7 @@
 package baseClassInitializationExercise1
 
-// TODO
+open class A(val s: String)
+
+open class B(s: String) : A(s)
+
+class C(s: String) : B(s)
