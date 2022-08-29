@@ -5,24 +5,15 @@ enum class Note {
   A, B, C, D, E, F, G
 }
 
-abstract class Instrument {
-  abstract fun play(n: Note): String
+open class Instrument(val name: String, val action: String) { // Instrument is an open class with two arguments
+  fun play(n: Note): String = "$name $action $n" // and a function
 }
+// next classes are inherited from Instrument; each with its own arguments:
+class Wind : Instrument(name = "Wind", action = "blow")
 
-class Wind : Instrument() {
-  override fun play(n: Note) =
-    "Wind blow $n"
-}
+class Percussion : Instrument(name = "Percussion", action = "strike")
 
-class Percussion : Instrument() {
-  override fun play(n: Note) =
-    "Percussion strike $n"
-}
-
-class Stringed : Instrument() {
-  override fun play(n: Note) =
-    "Stringed pluck $n"
-}
+class Stringed : Instrument(name = "Stringed", action = "pluck")
 
 fun tune(i: Instrument) = i.play(Note.C)
 
