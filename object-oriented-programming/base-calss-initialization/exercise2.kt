@@ -1,7 +1,6 @@
 package baseClassInitializationExercise2
 
 import atomictest.trace
-import logging.trace
 
 open class Plate(description: String) {
     init {
