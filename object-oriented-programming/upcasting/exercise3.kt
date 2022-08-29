@@ -17,32 +17,33 @@ open class ActionCharacter {
   fun fight(): String = "ActionCharacter fight"
 }
 
-class Hero
-
+class Hero : ActionCharacter(), Flyer, Swimmer, Fighter { // class Hero that combines ActionCharacter, Fighter, Swimmer and Flyer
+  override fun swim(): String = "Hero swim" // swim() return "hero swim"
+  override fun fly(): String = "Hero fly" // fly() return "hero fly"
+}
+// each function calls the member function available to its parameter and traces its result:
 fun tryFight(x: Fighter) {
-  TODO()
+  trace(x.fight())
 }
 
 fun trySwim(x: Swimmer) {
-  TODO()
+  trace(x.swim())
 }
 
 fun tryFly(x: Flyer) {
-  TODO()
+  trace(x.fly())
 }
 
 fun doAction(x: ActionCharacter) {
-  TODO()
+  trace(x.fight())
 }
 
 fun main() {
-/*
   val h = Hero()
   tryFight(h) // Treat it as a Fight
   trySwim(h) // Treat it as a Swim
   tryFly(h) // Treat it as a Fly
   doAction(h) // Treat it as an ActionCharacter
-*/
   trace eq """
     ActionCharacter fight
     Hero swim
