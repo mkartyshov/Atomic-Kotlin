@@ -18,15 +18,17 @@ class KangarooRat: Rodent {
 }
 
 fun upcast(rodent: Rodent) {
-  TODO()
+  trace(rodent.eat())
+  trace(rodent.speak())
+  // rodent.jump() won't compile because jump() was upcast to Rodent
 }
 
 fun main() {
   val mouse = Mouse()
   val kangarooRat = KangarooRat()
   trace(kangarooRat.jump())
-  upcast(mouse)
-  upcast(kangarooRat)
+  upcast(mouse) // output: Mouse.eat \n Mouse.speak
+  upcast(kangarooRat) // output: KangarooRat.eat \n KangarooRat.speak
   trace eq """
     KangarooRat.jump
     Mouse.eat
