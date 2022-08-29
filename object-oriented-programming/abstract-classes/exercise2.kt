@@ -1,15 +1,15 @@
 package abstractClassesExercise2
 import atomictest.eq
-
-abstract class Movable {
+// converted Movable and Sleepable to interfaces, so class Sofa could inherit both
+interface Movable {
   fun move() = "move"
 }
 
-abstract class Sleepable {
+interface Sleepable {
   fun sleepOn() = "sleep"
 }
 
-class Sofa: Movable(), Sleepable()
+class Sofa: Movable, Sleepable
 
 fun main() {
   val sofa = Sofa()
