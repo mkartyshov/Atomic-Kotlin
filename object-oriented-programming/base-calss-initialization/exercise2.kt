@@ -33,7 +33,7 @@ class PlaceSetting : Custom() { // create properties of type Spoon, Fork, Knife 
     val spoon = Spoon()
     val fork = Fork()
     val knife = Knife()
-    val dinnerPlate = DinnerPlate()
+    val plate = DinnerPlate()
     init {
         trace("PlaceSetting") // show the initialization order
     }
