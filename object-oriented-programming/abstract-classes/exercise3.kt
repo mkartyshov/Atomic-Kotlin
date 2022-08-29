@@ -8,7 +8,7 @@ enum class Note {
 open class Instrument(val name: String, val action: String) { // Instrument is an open class with two arguments
   fun play(n: Note): String = "$name $action $n" // and a function
 }
-// next classes are inherited from Instrument; each with its own arguments:
+// next subclasses are inherited from Instrument; each with its own arguments:
 class Wind : Instrument(name = "Wind", action = "blow")
 
 class Percussion : Instrument(name = "Percussion", action = "strike")
