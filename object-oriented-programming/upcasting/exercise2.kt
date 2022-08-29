@@ -1,17 +1,25 @@
 package upcastingExercise2
 import atomictest.eq
 
-interface Apple {
+interface Apple { // interface Apple containing an abstract member function
   fun consume(): String
 }
+// override consume function in inherited classes:
+class GrannySmith : Apple {
+  override fun consume(): String = "chomp GrannySmith"
+}
 
-class GrannySmith
+class Gala : Apple {
+  override fun consume(): String = "bite Gala"
+}
 
-class Gala
+class Fuji : Apple {
+  override fun consume(): String = "press Fuji"
+}
 
-class Fuji
-
-class Braeburn
+class Braeburn : Apple {
+  override fun consume(): String = "peel Braeburn"
+}
 
 fun main() {
   val apples = listOf(
